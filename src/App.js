@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
+import axios from "axios";
+import {BrowserRouter, Route, Link} from "react-router-dom"
+import {HomeRoute}from "./routes/HomeRoute"
+import {AboutRoute} from './routes/AboutRoute'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+          <div>
+              <Link to='/'>Home</Link>
+              <Link to='/about'>About</Link>
+          </div>
+          <Route path='/' exact component={HomeRoute} />
+          <Route path='/about' component={AboutRoute} />
+      </BrowserRouter>
     </div>
   );
 }
 
+
+
 export default App;
+
+//yarn add node-sass
+//yarn add axios
+
+//https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty

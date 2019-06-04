@@ -1,0 +1,27 @@
+
+$background: lightblue;
+
+.bitcoin-list-container {
+    background-color: $background;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.bitcoin-item {
+    flex: 1;
+    padding: 10px;
+    background-color: coral;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    button {
+        padding: 10px;
+    }
+}
